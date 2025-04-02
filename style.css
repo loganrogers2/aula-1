@@ -9,3 +9,6 @@ h1{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    font-style: oblique;
    font-weight: 900;}
    form{font-family: cursive;}
+body {background-image: url(images\ a.jfif);
+background-repeat: no-repeat;
+background-size: cover;}
