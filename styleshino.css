@@ -5,17 +5,39 @@ body{background: url(images\ a.jfif);
     background-repeat: no-repeat;
     background-size: cover;}
     
-    .caixa1{background-color: red;
-            margin: 20px;
-            padding: 50px;
-            border: solid 10px;
-            border-radius: 15px;}
+    .caixa1{display: inline;
+    background-color: red;
+    margin-right: 10px;overflow: hidden;
+    overflow: visible;
+    width: 200px;
+    height: 60px;
+background-color:#c5cae9;
+margin-bottom: 10px;
+overflow:visible}
 
-    .caixa2{background-color:
-         yellow;margin-top: 50px;
-         margin-right: 51px;
-         margin-bottom: 15px;
-         margin-left: 35px;
-         padding: 70px; 
-         border: dashed 15px;
-        border-radius: 15px;}
+    .caixa2{display: block;
+    background-color: yellow;
+    width: 300px;
+    height: 100px;
+    text-align: center;border: solid 10px;overflow: scroll;}
+    
+    .css{margin: 50px;
+    border:solid 5px;color: black;
+   ;width: 300px;
+    height: 200px;
+    text-align: center;}
+    .rodape{position: fixed;
+        bottom: 0 ;
+        left: 0;
+         width: 100%;
+         background: rgb(204, 22, 22);
+        color: aliceblue;
+        font-family: serif;
+        text-align: center;}
+.cascata{color: black;
+    }
+  .css1{position: relative;
+bottom: 0%;
+left: 0%;
+width: 100%;
+background: red;text-align: center;}
