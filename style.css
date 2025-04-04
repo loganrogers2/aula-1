@@ -1,14 +1,9 @@
-h1{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 6000;
-     font-size: xx-large;
-     font-style: italic;
-    text-align: center;}
-    p{text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-size: medium;
-   font-style: oblique;
-   font-weight: 900;}
+#principal{color: rgb(250, 10, 10);
+text-align: center;}
+.texto-amarelo{color: black;
+text-align: center;}
    form{font-family: cursive;}
 body {background-image: url(images\ a.jfif);
 background-repeat: no-repeat;
 background-size: cover;}
+

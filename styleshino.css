@@ -1,0 +1,21 @@
+.css{color: rgb(10, 9, 9) ;
+font-size: x-large; font-style: oblique;}
+.cascata{font-style: italic; color: red ;}
+body{background: url(images\ a.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;}
+    
+    .caixa1{background-color: red;
+            margin: 20px;
+            padding: 50px;
+            border: solid 10px;
+            border-radius: 15px;}
+
+    .caixa2{background-color:
+         yellow;margin-top: 50px;
+         margin-right: 51px;
+         margin-bottom: 15px;
+         margin-left: 35px;
+         padding: 70px; 
+         border: dashed 15px;
+        border-radius: 15px;}
