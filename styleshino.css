@@ -40,4 +40,28 @@ overflow:visible}
 bottom: 0%;
 left: 0%;
 width: 100%;
-background: red;text-align: center;}
+background: red;text-align: center; cursor: ;}
+
+.containe{display: flex;
+        flex-direction: column;
+            min-height: 100vh;}
+
+.principal{flex: 1;
+            background: rgb(230, 225, 225);}
+
+.rodape1{background-color: black;
+        color: aliceblue;
+        padding: 15px;
+        text-align: center;
+        bottom: 0%;
+        left: 0;
+            position: fixed;width: 100%;}
+            .menu ul{list-style: none;
+            padding: 0%;
+        margin: 0;}
+        .menu ul li{float: left;
+        position: relative;}
+        .menu ul li a{display: block;
+        padding: 10px 20px;
+    text-decoration: none;
+color: black;}
