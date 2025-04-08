@@ -1,0 +1,26 @@
+.corpo{
+    margin: 0;
+font-family: Arial, Helvetica, sans-serif;}
+.topo{
+    background-color: #e91710;
+    padding: 10px;
+}
+.menu{display: flex;
+    justify-content: center;
+}
+.menu a{
+    color: white;
+    padding: 14px 30px;
+    transition: background 0.3;
+}
+.menu a:hover{
+    background-color: rgb(240, 21, 131);
+}
+.rodapecab{background-color: red;
+    color: aliceblue;
+    padding: 15px;
+    text-align: center;
+    bottom: 0%;
+    left: 0;
+        position: fixed;width: 100%;}
+        button{background-color: black; padding: 13px;}
