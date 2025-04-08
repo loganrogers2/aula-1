@@ -1,0 +1,19 @@
+.menulat{
+    width: 200px;
+    background-color: black;
+    padding-top: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+.menulat a{
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+.menulat a:hover{background-color: gray;}
+main{margin-left: 220px;
+padding: 20px;}
