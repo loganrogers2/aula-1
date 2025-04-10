@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               .topo{ background-color: #e91710;
+            padding: 10px;}
+            .menu{display: flex;
+    justify-content: center;
+}
+.menu a{color: white;
+    padding: 14px 30px;
+    transition: background 0.3;}
+    .menu a:hover{background-color: black;}
+    .section h1{justify-content: center;}
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <nav class="menu">
+           <a href="#">inicio</a>
+           <a href="#">sobre</a>
+        <a href="#">serviços</a>
+           <a href="#">contato</a>
+        </nav>
+    </header>
+<section itemid="inicio" class="inicio">
+    <h1> Bem Vindo ao site</h1>
+    <p>venha conhecer nossos planos </p>
+</section>
+    <section>
+    <p> somos uma empresa de tecnologia mais antiga no mercado</p>
+    </section>
+    <section>
+        <div class="container">
+            <div class="card">
+                <img src="essen.jfif" alt="plano essencial">
+                <div class="card-content">
+                    <h3> Plano Basico</h3>
+                    <p> com 50 megas</p>
+                    <a href="#"class="btn">assinar</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="essen.jfif" alt="plano essencial">
+                <div class="card-content">
+                    <h3> Plano Plus</h3>
+                    <p> 150 megas banda larga</p>
+                    <a href="#"class="btn">assinar</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="essen.jfif" alt="plano essencial">
+                <div class="card-content">
+                    <h3> Plano deluxe</h3>
+                    <p> 500 megas de internet mas canais .</p>
+                    <a href="#"class="btn">assinar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <form action="enviar" method="post">
+            <br>
+            <label for="nome">Nome</label>
+            <input type="text">
+            <br> <br>
+            <label for="e-mail">e-mail</label>
+            <input type="email">
+            <br> <br>
+            <label for="mensagem">mensagem:</label> <br>
+            <textarea name="mensagem" id="mensagem" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
+    <footer class="rodapecab"> &copy;2025 criado por L.Rogers </footer>
+</body>
+</html>
