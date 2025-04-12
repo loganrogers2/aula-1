@@ -20,6 +20,8 @@ header{
     background-color: gray;
     padding: 10px 0;
     box-sizing: border-box;
+    position: fixed;
+    width: 100%;
 }
 
 header nav ul{
@@ -79,10 +81,10 @@ header nav ul li a:hover{
 
 .cta-button:hover{background-color: #e68a3f;}
 
-/*aqui começa nossa sesão sobre nós*/
+/*aqui começa nossa seção sobre nós*/
 
 .sobre-section{
-    background-color: #f38a28;
+    background-color:orangered;
     padding: 50px 20px;
     text-align: center;
 }
@@ -98,4 +100,94 @@ header nav ul li a:hover{
     margin: 0 auto 20px auto;
     line-height: 1.5;
 }
+/*seção de serviços*/
 
+#serviços{
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    background-color: #da6907;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16 px black;
+    background-color: orangered;
+}
+.card h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.card p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.preco{
+    font-weight: bold;
+    font-size: 18px;
+}
+#servicos h3{
+    font-size: 30px;
+}
+
+#contato{
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+#contato h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contato-form{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contato-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contato-form input,.contato-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom:15px;
+border-radius:15px;
+border:none;}
+
+.contato-form button{
+    background-color: orangered;
+    color:white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.contato-form button:hover{background-color: #e68a3f;}
+
+footer{ 
+    background-color: black;
+    color: rgb(233, 109, 8);
+    padding: 15px;
+    text-align: center;
+    bottom: 0%;
+    left: 0;
+        position: fixed;width: 100%;}}

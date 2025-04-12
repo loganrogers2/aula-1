@@ -12,9 +12,9 @@
         <nav>
             <ul>
                 <li><a href="#inicio">inicio</a></li>
-                <li><a href="">sobre</a></li>
-                <li><a href="">serviços</a></li>
-                <li><a href="">contato</a></li>
+                <li><a href="#sobre">sobre</a></li>
+                <li><a href="#serviços">serviços</a></li>
+                <li><a href="#contato">contato</a></li>
             </ul>
         </nav>
     </header>
@@ -23,17 +23,57 @@
     <section id="inicio"class="ini-section">
         <h1>bem vindo ao provedor de codigo!</h1>
         <p>codigos confiaveis para voce!</p>
-        <a href=""class="cta-button">conhaça nossos planos</a>
+        <a href="#serviços"class="cta-button">conhaça nossos planos</a>
     </section>
 
     <!--Sesão sobre nós-->
 
     <section id="sobre"class=sobre-section>
         <h2>sobre nós</h2>
-        <p>somos uma classe dedicada há distribuiçao de internet.</p>
-        <p>estamos aqui para atendelo <p>
-        
-
+        <p>Somos uma classe dedicada há distribuiçao de internet.</p>
+        <p>Estamos aqui para atendelo <p>
     </section>
+    <!--sesão de serviços-->
+
+    <section id="serviços">
+        <h2>Nossos serviços</h2>
+        <div class="cards">
+            <div class="card">
+                <h3> Plano basico</h3>
+                <p>ideal para uso domestico</p>
+                <p class="preco">49,99</p>
+            </div>
+            <div class="card">
+                <h3> Plano madio</h3>
+                <p>ideal para lugares maiores</p>
+                <p class="preco">79,99</p>
+            </div>
+            <div class="card">
+                <h3> Plano deluxe</h3>
+                <p>ideal para uso empresarial</p>
+                <p class="preco">99,99</p>
+            </div>
+        </div>
+    </section>
+
+    <!--seção de contato-->
+    <section id="contato">
+        <h2>Entre em contato</h2>
+        <p>Preencha o formulario abaixo</p>
+
+        <form class="contato-form">
+            <label for="name">Nome</label> 
+            <input type="text" placeholder="digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="digite seu email" required]>
+
+            <label for="menssagem">Menssagem</label>
+            <textarea rows="5" placeholder="digite sua menssagem"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer> &copy;2025 criado por L.Rogers </footer>
 </body>
 </html>
