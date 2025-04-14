@@ -1,0 +1,43 @@
+header h1 {
+    padding: 30px;
+    background-color: black;
+    color: red;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px
+}
+.bradesco p{
+    background-color: red;
+    text-align: center;
+    border-top: 50px;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 px 8px black;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.bradesco h2{
+    text-align: center;
+    background-color: red;
+    color: rgb(240, 231, 231);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+.rodapecab{background-color: rgb(10, 10, 10);
+    color: aliceblue;
+    text-align: center;
+    bottom: 0%;
+    left: 0;
+        position: fixed;width: 100%;}
+        .img{
+            display: flex;
+            justify-content: center;
+        }
