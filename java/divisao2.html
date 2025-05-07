@@ -9,9 +9,13 @@
     <script>
         function litrosPorQuilometros(km,litros){
             return km / litros
-        }  let distancia = parseInt(prompt('distancia percorrida'));
-       let consumo = parseInt(prompt('consumo total'));
-       console.log(litrosPorQuilometros(distancia,consumo));
+        }  let distancia = parseFloat(prompt('distancia percorrida'));
+       let consumo = parseFloat(prompt('consumo total'));
+      
+      alert(' A distancia informada foi de :' + distancia 
+      + ' o consumo informado foi de :' + consumo 
+      + ' sendo assim a media foi de :'
+      + litrosPorQuilometros(distancia,consumo))
        
     </script>
 </body>
