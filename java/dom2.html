@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="TituloDaPostagem">Trabalhando com DOM </h1>
+    <button  onclick="alterarTitulo()">clique para alterar</button>
+   
+   
+   <script>
+        let tituloOriginal = "Trabalhando com DOM"
+        let alterarTitulo = "novo titulo da postagem"
+
+    
+        function alterarTitulo(){
+            let velho = 'novo titulo da postagem'
+            let novo = document.getElementById('TituloDaPostagem')
+            novo.textContent = velho
+        }
+    </script>
+</html>
