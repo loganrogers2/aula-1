@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>site do Dom</h1>
+    <input type="text" id="nomeUsuario" placeholder="digite seu nome:">
+    <button onclick="mostraBoasVindas()"> Bem Vindo </button>
+    <p id="mensagemDeBoasVindas"></p>
+    <script>
+        function mostraBoasVindas(){
+            let nome = document.getElementById('nomeUsuario').value
+            let mensagem = document.getElementById('mensagemDeBoasVindas')
+            mensagem.textContent = "Bem vindo, ao mundo ilusorio do Dom," + nome +'.';
+        }
+    </script>
+</body>
+</html>

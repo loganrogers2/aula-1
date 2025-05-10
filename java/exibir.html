@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="quantidadeCarrinho">quantidade de itens no carrinho =  0</p>
+
+    <button onclick="adicionarItem()">+</button>
+   
+    <script>
+        let quantidade = 0;
+
+        function adicionarItem(){
+            quantidade += 1
+            let carrinho = document.getElementById("quantidadeCarrinho");
+            carrinho.textContent = "quantidade de itens" + quantidade;
+        }
+    </script>
+
+
+     <button onclick="diminuirItem()">-</button>
+    
+    <script>
+        let menos = 0;
+        function diminuirItem(){
+            if(quantidade > 0){
+           quantidade  -= 1
+             let carrinho = document.getElementById("quantidadeCarrinho");
+             carrinho.textContent = "quantidade de itens" +  quantidade  }
+            
+        }
+    </script>
+
+    <button onclick="apagar()">reset</button>
+    
+    <script>
+        let reset = 0;
+        function apagar(){
+              quantidade  = 0
+             let carrinho = document.getElementById("quantidadeCarrinho");
+             carrinho.textContent = "quantidade de itens" +  quantidade  
+
+        }
+    </script>
+
+</body>
+</html>
