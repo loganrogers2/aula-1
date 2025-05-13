@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="listaLinks">
+
+
+    </div>
     
+    <button onclick=" adicionarlinks()">Dar acesso aos links </button>
+
+    <script>
+        function adicionarlinks(){
+            let lista = document.getElementById("listaLinks")
+            lista.innerHTML = '<ul> <li> <a href = "https://www.google.com/" > Google </a> </li> <li> <a href = "https://github.com/"> GitHub <li> </a>  <a href =https://ge.globo.com/surfe/ > surf </a> </li>  </li>  </ul>'
+        }
+    </script>
 </body>
 </html>

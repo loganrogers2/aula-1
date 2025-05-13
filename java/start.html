@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .destaque{
+        background-color: yellow;
+        font-weight: bold;
+        font-size: x-large;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <P id = "meuTexto">segunda feira é o melhor dia</P>
+    <button onclick="destacartexto()">DESTACAR</button>
+
+    <script>
+        function destacartexto(){
+            let texto = document.getElementById("meuTexto");
+            texto.classList.toggle("destaque")
+        }
+    </script>
+</body>
+</html>
