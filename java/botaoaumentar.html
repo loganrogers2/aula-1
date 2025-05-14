@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="botaoAumentar">Aumentar Texto</button>
+<p id="textoAumentado">Este é o texto que será aumentado.</p>
+
+<script>
+    const botaoAumentar = document.getElementById('botaoAumentar');
+const textoAumentado = document.getElementById('textoAumentado');
+
+let tamanhoFonte = 16; // Tamanho inicial da fonte em pixels
+
+botaoAumentar.addEventListener('click', () => {
+  tamanhoFonte += 2; // Aumenta o tamanho da fonte em 2 pixels
+  textoAumentado.style.fontSize = tamanhoFonte + 'px'; // Define o novo tamanho da fonte
+});</script>
+</body>
+</html>

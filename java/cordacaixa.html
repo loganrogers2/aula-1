@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+        .modoEscuro{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+     <button onclick="alterarModo()">mudar cor da caixa</button>
+        <h1>fundação Bradesco</h1>
+    
+     <script>
+        function alterarModo(){
+            let body = document.body;
+            body.classList.toggle('modoEscuro');
+        }
+     </script>
+</body>
+</html>

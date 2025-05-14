@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <P id="vouMexer">mudando Tamanho da Fonte</P>
+    <button onclick="Aumentar()">+</button>
+    <button onclick="diminuirLetra()">-</button>
+
+    <script>
+    let tempoReal = document.getElementById('vouMexer')
+    let tamanhoAtual = 16;
+    
+    function Aumentar(){
+        tempoReal.style.fontsize = tamanhoAtual ++ + 'px'
+    }
+    function diminuirLetra(){
+        tempoReal.style.fontsize = tamanhoAtual -- + 'px'
+    }
+    </script>
+</body>
+</html>
