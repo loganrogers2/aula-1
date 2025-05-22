@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #quadrado{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 0px;
+    }
+</style>
+<body>
+   <div id="quadrado"></div>
+   
+   <script>
+    let posicao = 0;
+    let quadrado = document.getElementById("quadrado");
+    let intervalo = setInterval(function(){
+        posicao += 10;
+        quadrado.style.left = posicao + "px"
+        if(posicao >= 500){
+            clearInverval(intervalo);
+        }
+    },1000)
+   </script>
+</body>
+</html>

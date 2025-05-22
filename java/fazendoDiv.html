@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #caixa{
+       background-color: blue; 
+     border: solid 2px black;
+        border: 50px;
+        width: 100px;
+        border-radius: 15px;
+        margin: 0 auto;
+        height: 100px;
+    }
+    #caixa:hover{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        transition: all 0.5s;
+    }   
+</style>
+<body>
+    <div id="caixa">
+
+    </div>
+
+    <script>
+        caixa = document.getElementById("caixa");
+        caixa.addEventListener("mouseover", function(){
+            caixa.style.backgroundColor = "red";
+        
+        });
+        caixa.addEventListener("mouseout", function(){
+            caixa.style.backgroundColor = "black";});
+    </script>
+</body>
+</html>

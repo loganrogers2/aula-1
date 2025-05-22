@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"id="campoTexto">
+    <p id="contador">Teclas pressionadas : 0 </p>
+
+    <script>
+        let campoTexto = document.getElementById("campoTexto");
+        let contadorReal = document.getElementById("contador");
+
+        let armazenarContador = 0
+        
+        campoTexto.addEventListener("keyup", function(){
+            armazenarContador++
+            contadorReal.innerHTML = "Teclas pressionadas : " + armazenarContador
+        })
+    </script>
+</body>
+</html>
