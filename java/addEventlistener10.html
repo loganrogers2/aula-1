@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    #carregar{
+        width: 2000px;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+    }   
+</style>
+<body>
+    <h1>Carregando . . .</h1>
+         <div id="carregar"></div>
+       
+    <script>
+     let carregamento = 0;
+    let carregar = document.getElementById("carregar");
+    let carregando = setInterval(function(){
+        concluido += 1;
+        carregar.style.width = concluido + '%'
+        carregar.style.backgroundColor = 'green';
+        if(concluido >= 100){
+            clearInverval(carregando);
+        }
+    },1000)
+    </script>
+</body>
+</html>

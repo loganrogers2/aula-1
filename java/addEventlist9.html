@@ -5,22 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div{
+        background-color: ;
+        color: white;
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        border-radius: 10px;
+        padding: 20px;
+        
+    }
+  h1{
+    text-align: center;
+    color:black;
+    
+  }
+  input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+  button{
+    padding: 10px;
+    margin:5px;
+    border-radius: 5px;
+    background-color: aqua;
+    text-align: center;
+    
+  }
+  button:hover{
+    background-color:aquamarine;
+  }
+  h2{text-align: center;
+    color:black;
+  }
+</style>
 <body>
+    <div>
     <h1>Tempo Pra Larga</h1>
-    <input type="text"> <button id="contador">iniciar timer</button>
-    <h2>Tempo Restante : <span id="tempo"></span></h2>
+    <input type="number" id="tempo" placeholder="Digite o tempo em segundos"> 
+    <button id="iniciar">iniciar timer</button>
+    <h2>Tempo Restante : <span id="contador"></span></h2>
+    </div>
 
     <script>
-        let contagem = document.getElementById("contador");
-        let tempo = 0;
-        contagem.addEventListener(function(){
-            let intervalo = setInterval
-                tempo++;
-                document.getElementById("tempo").textContent = tempo;
-                if(tempo >= 10){
-                    clearInterval(intervalo);
-                }
-            }, 1000);
+       document.getElementById("iniciar").addEventListener("click", function(){
+        let tempo = document.getElementById("tempo").value;
+        let contador = tempo 
+        
+        let intervalo = setInterval(()=>{
+            document.getElementById("contador").textContent = contador
+        contador--;
+        if(contador <= 0){
+            clearInterval(intervalo);
+            alert("O tempo acabou!");
+        }},1000);
+
+        })
             
     </script>
     
