@@ -8,11 +8,13 @@
 <style>
    
     #carregar{
-        width: 2000px;
+        width: 200px;
         height: 50px;
         position: absolute;
         left: 0px;
-    }   
+        
+    } 
+    
 </style>
 <body>
     <h1>Carregando . . .</h1>
@@ -22,10 +24,10 @@
      let carregamento = 0;
     let carregar = document.getElementById("carregar");
     let carregando = setInterval(function(){
-        concluido += 1;
-        carregar.style.width = concluido + '%'
+        carregamento += 1;
+        carregar.style.width = carregamento + '%'
         carregar.style.backgroundColor = 'green';
-        if(concluido >= 100){
+        if(carregamento >= 100){
             clearInverval(carregando);
         }
     },1000)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>só exibir depois que colocar o botão</h1>
+    <button id="botao">aqui</button>
+    <p id="menssagem"></p>
+
+<script>
+    document.getElementById("botao").addEventListener("click",()=>{
+        setTimeout(()=>{
+            document.getElementById("menssagem").textContent = "passou 3 segundos"
+
+        },3000)
+
+
+
+
+
+
+    })
+
+</script>
+
+</body>
+</html>
