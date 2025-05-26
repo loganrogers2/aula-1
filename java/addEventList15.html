@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addEventlist15.css">
+    
+</head>
+<body>
+    <div class="semafaro">
+        <div id="Vermelho"class="luz"></div>
+        <div id="Amarelo"class="luz"></div>
+        <div id="Verde"class="luz"></div>
+    </div>
+    
+    <button id="btninicia">iniciar !</button>
+   
+    <script>
+        const luzVermelha = document.getElementById("Vermelho");
+        const luzAmarela = document.getElementById("Amarelo");
+        const luzVerde = document.getElementById("Verde");
+        function apagartodas(){
+            luzVermelha.className = "luz";
+            luzAmarela.className = "luz";
+            luzVerde.className = "luz";
+        }
+            document.getElementById("btninicia").addEventListener("click",() => {
+                apagartodas();
+                luzVerde.classList.add("Verde");
+
+                setTimeout(() => {
+                    apagartodas();
+                    luzAmarela.classList.add("Amarelo");
+                }, 2000);
+                setTimeout(() => {
+                    apagartodas();
+                    luzVermelha.classList.add("Vermelho");
+                }, 4000);
+                setInterval(() => {
+                    btninicia.click();
+                }, 8000);
+                })
+            
+
+                
+        
+                    
+
+            
+            
+
+        
+    
+    
+    </script>
+</body>
+</html>

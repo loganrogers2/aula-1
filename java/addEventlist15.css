@@ -1,0 +1,29 @@
+.semafaro{
+    width: 60px;
+    height: 160px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.luz{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin: auto;
+}
+.Vermelho{
+    background-color: red;
+}
+.Amarelo{
+    background-color: yellow;
+}
+.Verde{
+    background-color: green;
+}
+
+button{
+    margin-top: 20px;
+}
