@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        body {
+            background-color: rgba(133, 84, 44, 0.61);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1 {
+            color: rgb(10, 10, 10);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: rgb(226, 230, 7);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: rgb(8, 8, 3);
+        }
+        p {
+            color: rgb(10, 10, 10);
+        }
+        input[type="number"], input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+   </style> 
+   
+</head>
+<body>
+    
+    <h1>Finalização da logica com JavaScript</h1>
+    <button id="Par"> Par ou Impa </button>
+    <p id="multiplicador"></p>
+    <input type="number" id="numero" placeholder="Digite um numero">
+   
+
+    
+    <button id="contador"> contador </button>
+    <p id="conta"></p>
+    <input type="number" id="resultado" placeholder="Digite sua idade">
+        
+
+    <button id="idade"> Classificar idade</button>
+    <p id="resultado"></p>
+    <input type="number" id="nome" placeholder="Digite sua idade">
+
+     
+    <script>
+
+        document.getElementById('Par').addEventListener('click' ,function(){
+            let numero = parseInt(prompt('digite um numero'));
+            if(numero % 2 == 0)
+            
+            {
+            document.getElementById('multiplicador').innerHTML = " o numero é par";
+            } else{document.getElementById('multiplicador').innerHTML = " o numero é impar";
+
+            }
+            });
+
+
+            document.getElementById('contador').addEventListener('click' ,function(){
+                let contado = 10; 
+                let intervalo = setInterval(function() {
+                    if (contado >= 0) {
+                        document.getElementById('conta').innerHTML = contado;
+                        contado--;
+                    } else {
+                        clearInterval(intervalo);
+                        document.getElementById('conta').innerHTML = "Contagem concluída!";
+                    }
+                }, 1000);
+         })
+
+
+         document.getElementById('idade').addEventListener('click' ,function(){
+
+              let idade = parseInt(prompt('digite sua idade:' ));
+
+  if(idade >= 18 && idade <= 70){
+    document.getElementById ('nome').innerHTML = 'Voto Obrigatório';
+  }
+  else if((idade >= 16 && idade < 18 ) || idade > 70 ){
+    document.getElementById('nome').innerHTML = 'Voto Facultativo';
+  }
+   else {
+    document.getElementById('nome').innerHTML = 'Voto não permitido';
+  }
+
+
+         })
+
+
+
+    
+        
+        
+        
+
+    </script>
+</body>
+</html>
