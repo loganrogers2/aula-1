@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
@@ -12,8 +12,20 @@
 
     <form>
         @csrf
-        <div>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome do produto:</label>
             <input type="text" id="nome" name="nome" class="form-control" required value="{{ old('nome') }}" >
+        </div>
+        <div>
+            <label class="form-label1">Tipo De Produto</label>
+            <select class="form-select" name="tipo_id" required>
+                 <option value="">- Selecione -</option> 
+                   @foreach($tipos as $id => $nome)
+               <option value="{{ $id }}">
+                    {{ $nome }}
+                </option>
+                   @endforeach
+            </select>
         </div>
     </form>
 
