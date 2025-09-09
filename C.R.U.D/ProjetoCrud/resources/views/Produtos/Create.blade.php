@@ -10,23 +10,26 @@
 <body>
        <h1>Cadastro de Usuario</h1>   
 
-    <form>
-        @csrf
+    <form action="{{route('produtos.salvar')}}" method="POST">
+       @csrf
         <div class="mb-3">
             <label for="nome" class="form-label">Nome do produto:</label>
             <input type="text" id="nome" name="nome" class="form-control" required value="{{ old('nome') }}" >
         </div>
-        <div>
+        <div class="mb-5">
             <label class="form-label1">Tipo De Produto</label>
             <select class="form-select" name="tipo_id" required>
-                 <option value="">- Selecione -</option> 
-                   @foreach($tipos as $id => $nome)
-               <option value="{{ $id }}">
-                    {{ $nome }}
-                </option>
-                   @endforeach
+            <option value="">- Selecione -</option> 
+                @foreach($tipos as $id => $nome)
+            <option value="{{ $id }}">
+                {{ $nome }}
+            </option>
+                @endforeach
             </select>
         </div>
+        <button class="btn btn-primary" type="submit">
+            Salvar
+        </button>
     </form>
 
 
