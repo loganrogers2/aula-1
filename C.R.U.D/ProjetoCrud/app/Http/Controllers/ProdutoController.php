@@ -22,7 +22,7 @@ public function salvar(Request $Request){
     ]);
     DB::insert("INSERT INTO produtos (nome,tipo_id,created_at)
     VALUES (?,?,now())",[$dados['nome'],$dados['tipo_id']]);
-    return redirect()->route('produtos.salvar');
+    return redirect()->route('produtos.salvar')->with('ok','Produto cadastrado com sucesso!');
 } 
 
 

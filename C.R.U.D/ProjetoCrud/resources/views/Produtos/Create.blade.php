@@ -8,7 +8,12 @@
 
 </head>
 <body>
+    <div class="container my-5">
        <h1>Cadastro de Usuario</h1>   
+      
+       @if(session('ok'))
+        <div class="alert alert-success"> {{session('ok')}}</div>
+        @endif 
 
     <form action="{{route('produtos.salvar')}}" method="POST">
        @csrf
@@ -19,7 +24,7 @@
         <div class="mb-5">
             <label class="form-label1">Tipo De Produto</label>
             <select class="form-select" name="tipo_id" required>
-            <option value="">- Selecione -</option> 
+            <option value="">- Selecione Pais -</option> 
                 @foreach($tipos as $id => $nome)
             <option value="{{ $id }}">
                 {{ $nome }}
@@ -44,7 +49,7 @@
 
 
 
-    
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
