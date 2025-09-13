@@ -12,3 +12,4 @@ Route::get('/produtos/novo',[ProdutoController::class,'criar'])->name('produtos.
 Route::post('/produtos/novo',[ProdutoController::class,'salvar'])->name('produtos.salvar');
 Route::get('/teste/pais',[testeController::class,'pais'])->name('teste.pais');
 Route::get('/musica',[CadastroController::class,'index'])->name('evento.musica');
+Route::post('/musica',[CadastroController::class,'store']) ->name('evento.musica.store');

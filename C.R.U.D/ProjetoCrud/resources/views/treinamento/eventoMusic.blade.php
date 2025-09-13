@@ -228,7 +228,8 @@
                             <h3>Cadastre-se para receber novidades</h3>
                         </div>
                         <div class="card-body">
-                            <form action="" method="POST">
+                            <form action="/musica" method="POST">
+                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="nome" class="form-label">Nome Completo</label>
