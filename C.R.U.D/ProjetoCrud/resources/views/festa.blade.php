@@ -3,7 +3,7 @@
 @section('title', 'Festival de Música 2025')
 
 @section('content')
- <body>
+
     <!-- Hero Section -->
     <section id="inicio" class="bg-primary text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
         <div class="container">
@@ -298,6 +298,4 @@
         </div>
     </section>
     @endsection
- </body>
- </html>
  

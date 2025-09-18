@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+   <title> @yield ('title', 'Festival de Música 2025')</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    @stack('head')
+</head>   
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Início</a>
+                        <a class="nav-link" href="">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#programacao">Programação</a>
@@ -34,18 +34,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('evento.login') }}">Área Administrativa</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    
     <!-- Conteudo Principal -->
-     <main style="margin-top: 56px;">
+    <main style="margin-top: 56px;">
         @yield('content')
     </main>
-    
  
+
     <!-- Footer -->
+    @hasSection('footer')
+    @yield('footer')
+    @else
     <footer id="contato" class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
@@ -69,7 +76,8 @@
             </div>
         </div>
     </footer>
+@endif
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
 </body>
 </html>

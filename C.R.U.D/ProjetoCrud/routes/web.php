@@ -17,3 +17,4 @@ Route::post('/musica',[CadastroController::class,'store']) ->name('evento.musica
 
 
 Route::get('/festa',[festaController::class,'index'])->name('evento.festa');
+Route::get('login',[festaController::class,'login'])->name('evento.login');
