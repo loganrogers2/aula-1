@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('evento.login') }}">Área Administrativa</a>
+                        <a class="nav-link" href="{{ route('/admin/login') }}">Área Administrativa</a>
                     </li>
                 </ul>
             </div>

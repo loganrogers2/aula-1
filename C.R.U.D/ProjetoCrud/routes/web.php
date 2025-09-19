@@ -5,9 +5,8 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\testeController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\festaController;
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\logincontroller;
+
 
 Route::get('/produtos/novo',[ProdutoController::class,'criar'])->name('produtos.criar');
 Route::post('/produtos/novo',[ProdutoController::class,'salvar'])->name('produtos.salvar');
@@ -17,4 +16,7 @@ Route::post('/musica',[CadastroController::class,'store']) ->name('evento.musica
 
 
 Route::get('/festa',[festaController::class,'index'])->name('evento.festa');
-Route::get('login',[festaController::class,'login'])->name('evento.login');
+
+Route::get('/admin/login',[logincontroller::class,'loginForm'])->name('admin.login.form');
+
+
