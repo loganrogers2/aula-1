@@ -1,9 +1,8 @@
 @extends('layout')
 
-@section('title', 'Festival de Música 2025')
+@section('title', 'Login Administrativo')
 
 @section('content')
-
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="card shadow-lg p-4" style="max-width: 420px; width: 100%; border-radius: 12px;">
         <h2 class="text-center mb-4">Login Administrativo</h2>
@@ -34,25 +33,11 @@
             <button class="btn btn-primary w-100 mb-3">Entrar</button>
             
             <div class="text-center">
-                <a href="" class="btn btn-outline-success">
+                <a href="{{route('admin.register.form')}}" class="btn btn-outline-success">
                     Criar nova conta
                 </a>
             </div>
         </form>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection
