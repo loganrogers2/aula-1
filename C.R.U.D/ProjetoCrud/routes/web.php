@@ -21,8 +21,8 @@ Route::get('/festa',[festaController::class,'index'])->name('evento.festa');
 Route::get('/admin/login',[logincontroller::class,'showLoginForm'])->name('admin.login.form');
 Route::post('/admin/login',[logincontroller::class,'login'])->name('admin.login');
 Route::post('/admin/logout',[logincontroller::class,'logout'])->name('admin.logout');
-Route::get('/admin/register',[logincontroller::class,'Register'])->name('admin.register');
-Route::post('/admin/register',[logincontroller::class,'showRegisterForm'])->name('admin.register.form');
+Route::post('/admin/register',[logincontroller::class,'Register'])->name('admin.register');
+Route::get('/admin/register',[logincontroller::class,'showRegisterForm'])->name('admin.register.form');
 
 Route::middleware(['web'])->group(function () {
 Route::get('/admin/clientes',[cadastroController::class,'listarClientes'])->name('admin.clientes');
