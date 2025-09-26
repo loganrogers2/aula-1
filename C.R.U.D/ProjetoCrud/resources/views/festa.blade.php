@@ -37,12 +37,12 @@
     </section>
 
     <!-- Programação -->
-    <section id="programacao" class="py-5">
+    <section id="programacao" class="py-5"  style= "background: linear-gradient(135deg, #2e2828ff 0%, #695959ff 100%);">
         <div class="container">
             <h2 class="text-center mb-5">Programação</h2>
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="card h-100 border-primary">
+                    <div class="card h-100 border-danger">
                         <div class="card-header bg-danger text-white text-center">
                             <h4>Sexta-feira - 10/10</h4>
                         </div>
@@ -127,13 +127,13 @@
     </section>
 
     <!-- Ingressos -->
-    <section id="ingressos" class="py-5 bg-light" style ="background: linear-gradient(135deg, #ff0303ff 0%, #ff8902ff 100%);">
+    <section id="ingressos" class="py-5 bg-light" style= "background: linear-gradient(135deg, #f88501ff 0%, #f51a0bff 100%);">
         <div class="container">
             <h2 class="text-center mb-5">Ingressos</h2>
             <div class="row">
-                <div class="col-lg-4 mb-4" style="transform: translateY(-10px);">
+                <div class="col-lg-4 mb-4 " >
                     <div class="card text-center h-100">
-                        <div class="card-body">
+                        <div class="card-body" style="card:hover {transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.2); transition:all 0.3s ease-in-out;}">
                             <h4 class="card-title">Pista</h4>
                             <h2 class="text-primary">R$ 120</h2>
                             <p class="card-text">Acesso à área da pista</p>
@@ -186,7 +186,7 @@
     </section>
 
     <!-- Formulário de Inscrição -->
-    <section class="py-5">
+    <section class="py-5"   style= "background: linear-gradient(135deg, #2e2828ff 0%, #695959ff 100%);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -194,7 +194,7 @@
                         <div class="card-header bg-primary text-white text-center">
                             <h3>Cadastre-se para receber novidades</h3>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" >
                             <form action="/musica" method="POST">
                                  @csrf
                                 <div class="row">
@@ -277,22 +277,22 @@
             <h2 class="text-center mb-5">Galeria do Evento Anterior</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <img src="baixados (1).jfif" class="img-fluid rounded shadow" alt="Foto 1">
+                    <img src="{{ asset('images/images (1).jpg') }}" class="img-fluid rounded shadow" alt="Foto 1">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="baixados.jfif" class="img-fluid rounded shadow" alt="Foto 2">
+                    <img src="{{ asset('images/download (2).jpg') }}" class="img-fluid rounded shadow" alt="Foto 2">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="baixados (2).jfif" class="img-fluid rounded shadow" alt="Foto 3">
+                    <img src="{{ asset('images/download (3).jpg') }}" class="img-fluid rounded shadow" alt="Foto 3">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="baixados (3).jfif" class="img-fluid rounded shadow" alt="Foto 4">
+                    <img src="{{ asset('images/download (4).jpg') }}" class="img-fluid rounded shadow" alt="Foto 4">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="baixados (4).jfif" class="img-fluid rounded shadow" alt="Foto 5">
+                    <img src="{{ asset('images/images (2).jpg') }}" class="img-fluid rounded shadow" alt="Foto 5">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="baixados (5).jfif" class="img-fluid rounded shadow" alt="Foto 6">
+                    <img src="{{ asset('images/images.jpg') }}" class="img-fluid rounded shadow" alt="Foto 6">
                 </div>
             </div>
         </div>
