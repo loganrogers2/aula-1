@@ -27,17 +27,17 @@ Route::get('/admin/register',[logincontroller::class,'showRegisterForm'])->name(
 
 Route::middleware(['web'])->group(function () {
 
-Route::get('/admin/clientes',[cadastroController::class,'listarClientes'])->name('admin.clientes');
-Route::get('/admin/users/create',[logincontroller::class,'showCreateUserForm'])->name('admin.users.create');
-Route::post('/admin/users',[logancontroller::class,'createUser'])->name('admin.users.store');
+ Route::get('/admin/clientes',[cadastroController::class,'listarClientes'])->name('admin.clientes');
+ Route::get('/admin/users/create',[logincontroller::class,'showCreateUserForm'])->name('admin.users.create');
+ Route::post('/admin/users',[logincontroller::class,'createUser'])->name('admin.users.store');
   // Gestão de clientes
-    Route::get('/admin/clientes', [CadastroController::class, 'listarClientes'])->name('admin.clientes');
-    Route::get('/admin/cliente/{id}', [CadastroController::class, 'show'])->name('admin.cliente.show');
-    Route::get('/admin/cliente/{id}/edit', [CadastroController::class, 'edit'])->name('admin.cliente.edit');
-    Route::put('/admin/cliente/{id}', [CadastroController::class, 'update'])->name('admin.cliente.update');
-    Route::delete('/admin/cliente/{id}', [CadastroController::class, 'destroy'])->name('admin.cliente.destroy');
+ Route::get('/admin/clientes', [CadastroController::class, 'listarClientes'])->name('admin.clientes');
+ Route::get('/admin/cliente/{id}', [CadastroController::class, 'show'])->name('admin.cliente.show');
+ Route::get('/admin/cliente/{id}/edit', [CadastroController::class, 'edit'])->name('admin.cliente.edit');
+ Route::put('/admin/cliente/{id}', [CadastroController::class, 'update'])->name('admin.cliente.update');
+ Route::delete('/admin/cliente/{id}', [CadastroController::class, 'destroy'])->name('admin.cliente.destroy');
 });
-
+ 
 Route::get('/', function () {
     return redirect('/itens');
 });

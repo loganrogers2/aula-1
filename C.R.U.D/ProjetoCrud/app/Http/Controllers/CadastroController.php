@@ -91,7 +91,7 @@ class CadastroController extends Controller
         if (!session('admin_user_id')) {
             return redirect()->route('admin.login.form');
         }
-
+        
         // Buscar cliente por ID
         $cliente = DB::select("SELECT * FROM cadastros WHERE id = ? LIMIT 1", [$id]);
         

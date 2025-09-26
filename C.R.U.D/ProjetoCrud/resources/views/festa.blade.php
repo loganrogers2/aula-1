@@ -5,24 +5,24 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section id="inicio" class="bg-primary text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <section id="inicio" class="bg-primary text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(135deg, #f51a0bff 0%, #f88501ff 100%);">
         <div class="container">
             <div class="row align-items-center min-vh-75">
                 <div class="col-lg-8 mx-auto">
-                    <h1 class="display-3 fw-bold mb-4">Festival de Música 2024</h1>
-                    <p class="lead mb-4">3 dias de música, arte e diversão no coração de São Paulo</p>
+                    <h1 class="display-3 fw-bold mb-4">Festival de Churrasco 2025</h1>
+                    <p class="lead mb-4"> Os Melhores Estão Aqui !</p>
                     <div class="row text-center mb-4">
                         <div class="col-md-4">
                             <h3><i class="fas fa-calendar-alt"></i></h3>
-                            <p>15-17 de Dezembro</p>
+                            <p>Dias 10, 11 e 12 de Outubro</p>
                         </div>
                         <div class="col-md-4">
                             <h3><i class="fas fa-map-marker-alt"></i></h3>
-                            <p>Parque Ibirapuera</p>
+                            <p> Marco Zero - Recife </p>
                         </div>
                         <div class="col-md-4">
                             <h3><i class="fas fa-users"></i></h3>
-                            <p>50+ Artistas</p>
+                            <p> Os Melhores Chefs</p>
                         </div>
                     </div>
                     <a href="#ingressos" class="btn btn-warning btn-lg me-3">
@@ -43,26 +43,26 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 border-primary">
-                        <div class="card-header bg-primary text-white text-center">
-                            <h4>Sexta-feira - 15/12</h4>
+                        <div class="card-header bg-danger text-white text-center">
+                            <h4>Sexta-feira - 10/10</h4>
                         </div>
                         <div class="card-body">
                             <div class="timeline">
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>18:00</strong>
-                                    <span>Abertura</span>
+                                    <span>José Almiro</span>
                                 </div>
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>19:00</strong>
-                                    <span>Banda Local XYZ</span>
+                                    <span>Kelvin Lopo</span>
                                 </div>
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
-                                    <strong>21:00</strong>
-                                    <span>DJ Eletrônico</span>
+                                    <strong>20:00</strong>
+                                    <span> Fabrício Lemos</span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <strong>23:00</strong>
-                                    <span>Show Principal</span>
+                                    <strong>21:00</strong>
+                                    <span>Letícia Massula</span>
                                 </div>
                             </div>
                         </div>
@@ -71,25 +71,25 @@
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 border-success">
                         <div class="card-header bg-success text-white text-center">
-                            <h4>Sábado - 16/12</h4>
+                            <h4>Sábado - 11/10</h4>
                         </div>
                         <div class="card-body">
                             <div class="timeline">
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>16:00</strong>
-                                    <span>Música Acústica</span>
+                                    <span>Carol Armênio</span>
+                                </div>
+                                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                    <strong>17:00</strong>
+                                    <span>Santi Roig</span>
                                 </div>
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>18:00</strong>
-                                    <span>Rock Nacional</span>
-                                </div>
-                                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
-                                    <strong>20:00</strong>
-                                    <span>Pop Internacional</span>
+                                    <span>Roberto Ravioli</span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <strong>22:00</strong>
-                                    <span>Headliner</span>
+                                    <strong>19:00</strong>
+                                    <span> Paula Labaki</span>
                                 </div>
                             </div>
                         </div>
@@ -98,25 +98,25 @@
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 border-warning">
                         <div class="card-header bg-warning text-dark text-center">
-                            <h4>Domingo - 17/12</h4>
+                            <h4> Domingo - 12/10 </h4>
                         </div>
                         <div class="card-body">
                             <div class="timeline">
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>15:00</strong>
-                                    <span>Música Infantil</span>
+                                    <span>José Mateus</span>
+                                </div>
+                                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                    <strong>16:00</strong>
+                                    <span>Netão BomBeef</span>
                                 </div>
                                 <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
                                     <strong>17:00</strong>
-                                    <span>MPB</span>
-                                </div>
-                                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
-                                    <strong>19:00</strong>
-                                    <span>Sertanejo</span>
+                                    <span>Alder Lopes </span>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <strong>21:00</strong>
-                                    <span>Encerramento</span>
+                                    <strong>18:00</strong>
+                                    <span> Renzo Garibaldi </span>
                                 </div>
                             </div>
                         </div>
@@ -127,11 +127,11 @@
     </section>
 
     <!-- Ingressos -->
-    <section id="ingressos" class="py-5 bg-light">
+    <section id="ingressos" class="py-5 bg-light" style ="background: linear-gradient(135deg, #ff0303ff 0%, #ff8902ff 100%);">
         <div class="container">
             <h2 class="text-center mb-5">Ingressos</h2>
             <div class="row">
-                <div class="col-lg-4 mb-4">
+                <div class="col-lg-4 mb-4" style="transform: translateY(-10px);">
                     <div class="card text-center h-100">
                         <div class="card-body">
                             <h4 class="card-title">Pista</h4>
