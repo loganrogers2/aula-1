@@ -1,0 +1,74 @@
+/* Estilos personalizados para a Barbearia */
+:root{
+  --primary: #2b7a78; /* verde-azulado */
+  --accent: #f6b26b; /* tom quente para detalhes */
+  --muted: #6c757d;
+}
+
+html,body{
+  height:100%;
+}
+body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg,#f8fafc 0%, #eef2f6 100%);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.navbar{
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+}
+.navbar-brand{
+  color: var(--primary) !important;
+  letter-spacing: 0.4px;
+}
+.navbar .nav-link{
+  color: #495057;
+  transition: color .15s ease-in-out, transform .15s ease;
+}
+.navbar .nav-link:hover{
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.card{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(20,30,50,0.06);
+}
+.card-title{
+  color: #1f2937;
+  font-weight:600;
+}
+.card-text{
+  color: var(--muted);
+}
+
+.btn-success{
+  background: linear-gradient(90deg,var(--primary), #22665f);
+  border: none;
+  box-shadow: 0 6px 12px rgba(43,122,120,0.12);
+}
+.btn-outline-secondary{
+  border-radius: 6px;
+}
+
+main.container{
+  max-width:1100px;
+}
+
+.hero{
+  padding: 3.25rem 0;
+}
+.hero h1{
+  color: #0f1724;
+}
+
+@media (max-width:576px){
+  .navbar-brand{font-size:1.05rem}
+}
+
+/* Pequeno ajuste para o footer (caso adicione) */
+footer{opacity:.9;color:var(--muted);padding:2rem 0}
