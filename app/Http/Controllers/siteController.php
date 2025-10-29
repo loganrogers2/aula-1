@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
+use App\Models\Professional;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class SiteController extends Controller
 {
     /**
-     * Array com os serviços disponíveis
+     * Retorna os serviços disponíveis do banco de dados
      */
-    private $services = [
-        ['id' => 1, 'name' => 'Corte Masculino', 'price' => '35,00', 'description' => 'Cortes modernos ou tradicionais, adequados ao seu estilo. Inclui lavagem e finalização.'],
-        ['id' => 2, 'name' => 'Barba', 'price' => '25,00', 'description' => 'Modelagem completa com toalha quente, óleo de barba e finalização perfeita.'],
-        ['id' => 3, 'name' => 'Combo Completo', 'price' => '55,00', 'description' => 'Corte + barba com tratamento completo. Inclui massagem relaxante.'],
-        ['id' => 4, 'name' => 'Hidratação Capilar', 'price' => '45,00', 'description' => 'Tratamento profundo com produtos premium para revitalizar seus cabelos.'],
-    ];
+    private function getServices()
+    {
+        return Service::where('active', true)->get();
+    }
 
     /**
      * Mostrar a página inicial do site.
@@ -37,7 +37,7 @@ class SiteController extends Controller
      */
     public function shop()
     {
-        return view('shop', ['products' => $this->services]);
+        return view('shop', ['products' => $this->getServices()]);
     }
 
     /**
@@ -47,7 +47,7 @@ class SiteController extends Controller
      */
     public function services()
     {
-        return view('services', ['services' => $this->services]);
+        return view('services', ['services' => $this->getServices()]);
     }
 
     /**
@@ -55,7 +55,12 @@ class SiteController extends Controller
      */
     public function createAppointment()
     {
-        return view('appointments.create', ['services' => $this->services]);
+        $services = $this->getServices();
+        $professionals = Professional::where('active', true)->get();
+        return view('appointments.create', [
+            'services' => $services,
+            'professionals' => $professionals
+        ]);
     }
 
     /**
@@ -64,7 +69,9 @@ class SiteController extends Controller
     public function storeAppointment(Request $request)
     {
         $validated = $request->validate([
-            'service_id' => 'required|integer|exists:services,id',
+            'service_ids' => 'required|array|min:1',
+            'service_ids.*' => 'required|integer|exists:services,id',
+            'professional_id' => 'required|integer|exists:professionals,id',
             'client_name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'email' => 'nullable|email|max:255',
@@ -73,9 +80,21 @@ class SiteController extends Controller
             'notes' => 'nullable|string|max:1000'
         ]);
 
+        // Remove service_ids do array validated para criar o appointment
+        $service_ids = $validated['service_ids'];
+        unset($validated['service_ids']);
+        
         $appointment = new Appointment($validated);
         $appointment->status = 'pending';
         $appointment->save();
+        
+        // Adiciona os serviços selecionados com seus preços atuais
+        $services = Service::whereIn('id', $service_ids)->get();
+        foreach ($services as $service) {
+            $appointment->services()->attach($service->id, [
+                'price_at_time' => $service->price
+            ]);
+        }
 
         // Limpa o carrinho após criar o agendamento
         Session::forget('cart');
@@ -98,7 +117,7 @@ class SiteController extends Controller
      */
     public function addToCart($id)
     {
-        $service = collect($this->services)->firstWhere('id', (int) $id);
+        $service = Service::find($id);
         
         if (!$service) {
             return redirect()->back()->with('error', 'Serviço não encontrado.');
@@ -161,5 +180,15 @@ class SiteController extends Controller
     {
         Session::forget('cart');
         return redirect()->back()->with('success', 'Carrinho esvaziado!');
+    }
+
+    /**
+     * Mostrar a página da equipe
+     * 
+     * @return \Illuminate\View\View
+     */
+    public function equipe()
+    {
+        return view('equipe');
     }
 }

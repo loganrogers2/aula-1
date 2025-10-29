@@ -31,15 +31,70 @@
                         @csrf
                         
                         <div class="mb-3">
-                            <label for="service_id" class="form-label">Serviço *</label>
-                            <select name="service_id" id="service_id" class="form-select" required>
-                                <option value="">Selecione um serviço</option>
+                            <label class="form-label">Serviços *</label>
+                            <div class="row g-3">
                                 @foreach($services as $service)
-                                    <option value="{{ $service['id'] }}">
-                                        {{ $service['name'] }} - R$ {{ $service['price'] }}
-                                    </option>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input service-checkbox" type="checkbox" 
+                                                           name="service_ids[]" value="{{ $service->id }}" 
+                                                           id="service_{{ $service->id }}"
+                                                           {{ (is_array(old('service_ids')) && in_array($service->id, old('service_ids'))) ? 'checked' : '' }}>
+                                                    <label class="form-check-label" for="service_{{ $service->id }}">
+                                                        <h6 class="mb-1">{{ $service->name }}</h6>
+                                                        <p class="text-muted small mb-0">R$ {{ number_format($service->price, 2, ',', '.') }}</p>
+                                                    </label>
+                                                </div>
+                                                <p class="small text-muted mt-2 mb-0">{{ $service->description }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endforeach
-                            </select>
+                            </div>
+                            <div class="mt-3">
+                                <p class="mb-0">Total: <strong id="total-price">R$ 0,00</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Profissional *</label>
+                            <div class="row g-3">
+                                @foreach($professionals as $professional)
+                                    <div class="col-md-6">
+                                        <div class="card h-100 professional-card">
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" 
+                                                           name="professional_id" value="{{ $professional->id }}" 
+                                                           id="professional_{{ $professional->id }}"
+                                                           {{ old('professional_id') == $professional->id ? 'checked' : '' }}
+                                                           required>
+                                                    <label class="form-check-label w-100" for="professional_{{ $professional->id }}">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            @if($professional->photo_url)
+                                                                <img src="{{ $professional->photo_url }}" alt="{{ $professional->name }}" 
+                                                                     class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                                                            @else
+                                                                <div class="rounded-circle bg-secondary me-2 d-flex align-items-center justify-content-center" 
+                                                                     style="width: 40px; height: 40px;">
+                                                                    <i class="fas fa-user text-white"></i>
+                                                                </div>
+                                                            @endif
+                                                            <div>
+                                                                <h6 class="mb-0">{{ $professional->name }}</h6>
+                                                                <small class="text-muted">{{ $professional->role }}</small>
+                                                            </div>
+                                                        </div>
+                                                        <p class="small text-muted mb-0">{{ $professional->bio }}</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -97,18 +152,81 @@
     </div>
 </div>
 
+@push('styles')
+<style>
+.professional-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.professional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.professional-card .form-check-input {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.professional-card .form-check-label {
+    cursor: pointer;
+}
+
+.professional-card:has(.form-check-input:checked) {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 1px var(--bs-primary);
+}
+</style>
+@endpush
+
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Validação do formulário
     const form = document.querySelector('.needs-validation');
     form.addEventListener('submit', function(event) {
+        // Verifica se pelo menos um serviço foi selecionado
+        const serviceCheckboxes = document.querySelectorAll('.service-checkbox:checked');
+        if (serviceCheckboxes.length === 0) {
+            event.preventDefault();
+            alert('Por favor, selecione pelo menos um serviço.');
+            return;
+        }
+
         if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
         }
         form.classList.add('was-validated');
     });
+ago
+    // Cálculo do preço total
+    const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
+    const servicePrices = {
+        @foreach($services as $service)
+            {{ $service->id }}: {{ $service->price }},
+        @endforeach
+    };
+
+    function updateTotal() {
+        let total = 0;
+        serviceCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                total += servicePrices[checkbox.value];
+            }
+        });
+        document.getElementById('total-price').textContent = 
+            'R$ ' + total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    serviceCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateTotal);
+    });
+
+    // Calcula o total inicial (para checkboxes marcados por validação)
+    updateTotal();
 
     // Máscara para telefone
     const phone = document.getElementById('phone');
